@@ -8,10 +8,12 @@ app.use(cors())
 app.get(`/onecall`,(req, res)=>{
     console.log(res.data)
     res.status(200).send(res.body)
+    console.log(res.body)
 })
 
 app.get('/img/wn', (req, res)=>{
     res.status(200).send(res.body)
+    console.log(res.body)
 })
 
 app.get('/', function (req, res){

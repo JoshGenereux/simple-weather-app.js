@@ -35,6 +35,7 @@ window.addEventListener('load', ()=>{
         axios.get(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
             .then(response =>{
                 picture.setAttribute('src', `http://openweathermap.org/img/wn/${iconId}@2x.png`)
+                console.log(response)
             })
     }
 })
