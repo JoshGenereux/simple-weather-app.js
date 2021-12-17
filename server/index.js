@@ -17,7 +17,7 @@ app.get('/img/wn', (req, res)=>{
 })
 
 app.get('/', (req, res)=>{
-    res.sendfile(path.join(__dirname, '/index.html'))
+    res.sendfile(path.join(__dirname, '../index.html'))
 })
 
 const port = process.env.PORT || 4000;
