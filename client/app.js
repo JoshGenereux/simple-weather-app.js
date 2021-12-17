@@ -8,10 +8,13 @@ window.addEventListener('load', ()=>{
     let locationTimeZone = document.querySelector('.location-timezone')
     let picture = document.querySelector('.pic')
 
+    console.log(navigator.geolocation)
+
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(position => {
             long = position.coords.longitude
             lat = position.coords.latitude
+            console.log(long, lat)
 
 
             axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=imperial&appid=${apiKey}`)
