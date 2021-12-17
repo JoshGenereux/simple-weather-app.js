@@ -16,6 +16,10 @@ app.get('/img/wn', (req, res)=>{
     console.log(res.body)
 })
 
-const port = 4000;
+app.get('/', (req, res)=>{
+    res.sendfile(path.join(__dirname, '../index.html'))
+})
+
+const port = process.env.PORT || 4000;
 
 app.listen(port, ()=> console.log(`Running on port ${port}`))
