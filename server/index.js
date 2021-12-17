@@ -17,11 +17,11 @@ app.get('/img/wn', (req, res)=>{
 })
 
 app.get('/', (req, res)=>{
-    res.sendfile(path.join(__dirname, '../index.html'))
+    res.sendFile(path.join(__dirname, '../index.html'))
 })
 
 app.get('/css', (req, res)=>{
-    res.sendfile(path.join(__dirname, '../styles.css'))
+    res.sendFile(path.join(__dirname, '../styles.css'))
 })
 
 const port = process.env.PORT || 4000;
